@@ -17,7 +17,7 @@ COPY setup.cfg /user/local/src/hsds/
 COPY hsds/*.py /usr/local/src/hsds/hsds/
 COPY hsds/util/*.py /usr/local/src/hsds/hsds/util/
 COPY admin/config/config.yml /etc/hsds/
-COPY admin/config/config.yml /usr/local/src/hsds/admin/config/
+COPY admin/config/config.yml admin/config/override.yml /usr/local/src/hsds/admin/config/
 COPY entrypoint.sh  /
 RUN /bin/bash -c 'cd /usr/local/src/hsds; \
                   pip install build;\
